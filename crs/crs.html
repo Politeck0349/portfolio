@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>차비서</title>
+<link rel="stylesheet" href="./crs.css">
+</head>
+<body>
+	<div id="fullpage">
+    <div class="fullsection full1" pageNum="1">
+      <div id="logo"><div> </div><img src="./car.png" alt=""><div> </div></div>
+      <div class="input">
+        <input class="upload-name" value="첨부파일" placeholder="첨부파일">
+        <label class="label" for="file">파일업로드</label> 
+        <!-- <button id="button" onclick="div_show()"> 제출하기 </button> -->
+        <input type="file" id="file" class="ex_file" name="ex_file" onchange="fileUpload()" multiple>
+        <!-- <input type="file" class="ex_file" name="ex_file" onchange="fileUpload()" multiple> -->
+      </div>
+      <br><br>
+      <div class='quick'>
+        <ul>
+          <li class="page1"></li>
+          <li class="page2" onclick="loadingProcess();">제출하기</li>
+          <!-- <li class="page3"></li> -->
+        </ul>
+      </div>
+    </div>
+		<div  class="fullsection full2" pageNum="2">
+      <div class="container">
+        <div class="video1">
+          <video class="video" muted loop>
+            <source src="" type="video/webm">
+          </video>
+        </div>
+        <div id="video2" class="video2">
+          <video class="video" muted loop>
+            <source src="" type="video/webm">
+          </video>
+        </div>
+          <div class="result1">
+            <div class="buttons">
+              <button class="btn1" onclick="play1()">실행</button>
+              <button class="btn2" onclick="play2()">차선영상</button>
+              <button class="btn3" onclick="play3()">객체영상</button> 
+              <button class="btn4" onclick="chart()">차트보기</button> 
+              <button class="btn5" onclick="result()">결과보기</button> 
+            </div>
+            <div class="video5">
+              <video class="video" muted loop>
+                <source src="" type="video/webm">
+              </video>
+            </div>
+          </div>
+      </div>
+      <div class="container2">
+        <div class="video3">
+          <video class="video" muted loop>
+            <source src="" type="video/webm">
+          </video>
+        </div>
+        <div class="video4">
+              <canvas id="myChart">
+
+              </canvas>
+          </div>
+          <div class="result2">
+            <div class="video6">
+                <img id="result" src="./empty.png" alt="result">
+            </div>
+          </div>
+      </div>
+      <div class="modal">
+        <div class="modalBox">
+        </div>
+    </div>
+    </div>
+        <!-- <div class="fullsection full3" pageNum="3"></div> -->
+        <!-- <div class="fullsection full4" pageNum="4"></div> -->
+        <!-- <div class="fullsection full5" pageNum="5"></div> -->
+	</div>
+  
+  <script src="./jquery-1.12.3.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+  <script src="./crs.js"></script>
+</body>
+
+</html>

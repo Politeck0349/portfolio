@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/fstyle.css">
+    <script src="script/login.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+            <div class="logo"><img onclick="location.href='main_freezon.html'" style="cursor:pointer" src="img/logoim.png" alt=""></div>
+            <ul id="contents">
+                <li><a href="#" onclick="location.href='my_freezon.html'">우리집 냉장고</a></li>
+                <li><a href="">옆집 냉장고</a></li>
+                <li><a href="#" onclick="location.href='my_recipe.html'">주간 레시피</a></li>
+                <li><a href="#" onclick="location.href='service.html'">고객센터</a></li>
+            </ul>
+            <div class="log">
+                <a href="#" onclick="location.href='login.html'">로그인/회원가입</a>
+            </div>
+        </header>
+        <section id="content"> 
+            <div class="logo1">
+                <img src="img/logoim.png" alt="">
+            </div>
+            <div id="sform">
+                
+                오늘 뭐해 먹지? 는 이용자가 식재료를 등록하면<br>
+                등록한 식재료에 맞게 레시피 추천 및 식재료 관리를<br>
+                해주는 AI 맞춤형 레시피 추천 서비스입니다.<br><br>
+                <form name="login" action="" method="post">
+                    <div><input id="id" type="text" name="아이디" placeholder="아이디"><br></div>
+                    <div><input id="passw" type="password" name="비밀번호" placeholder="비밀번호"><br></div>
+                    <div><input id="user_login" type="submit" value="로그인" style="cursor:pointer"></div>
+                    <div><input id="new_login" type="submit" value="회원가입" style="cursor:pointer" onclick="popupFunc();"></div>
+                </form>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

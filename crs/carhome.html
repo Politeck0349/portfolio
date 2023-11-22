@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./carhome.css">
+</head>
+<body>
+    <div id="wrap">
+        <div id="logo"><div> </div><img src="./car.png" alt=""><div> </div></div>
+        <div class="input">
+          <input type="file" class="ex_file" name="ex_file" onchange="fileUpload()" multiple>
+        </div>
+        <form action="./car.php" method="POST">
+          <input id="filename" name="filename" >
+          <input type="submit" value="제출하기">
+        </form>
+        <br><br>
+    </div>
+    <script type="text/javascript">
+      var filename = "";
+      function fileUpload(){
+        var fileInput = document.getElementsByClassName("ex_file");
+        for( var i=0; i<fileInput.length; i++ ){
+          if( fileInput[i].files.length > 0 ){
+            for( var j = 0; j < fileInput[i].files.length; j++ ){
+              filename = filename + fileInput[i].files[j].name; // 파일명 출력
+            }
+          }
+        }
+      }
+      function filename(){
+        document.getElementById('filename').setAttribute('value', filename );
+
+      }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartCoordi</title>
+    <script src="../js/face.js" defer="defer"></script>
+    <script src="../js/jquery-1.12.3.js"></script>
+    <script src="../js/face_shape.js" defer="defer"></script>
+    <script src="../js/index.js"></script>
+    <script src="../js/main.js"></script>
+    <link rel="stylesheet" href="dist/jquery.flipster.min.css">
+    <script src="dist/jquery.flipster.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
+    <script>
+        (function (d, s, id) {
+            if (d.getElementById(id)) {
+                if (window.__TOMORROW__) {
+                    window.__TOMORROW__.renderWidget();
+                }
+                return;
+            }
+            const fjs = d.getElementsByTagName(s)[0];
+            const js = d.createElement(s);
+            js.id = id;
+            js.src = "https://www.tomorrow.io/v1/widget/sdk/sdk.bundle.min.js";
+
+            fjs.parentNode.insertBefore(js, fjs);
+        })(document, 'script', 'tomorrow-sdk');
+    </script>
+    <link rel="stylesheet" href="../css/face.css">
+</head>
+
+<body>
+    <div id="fullpage">
+        <div class='quick'>
+            <ul>
+                <li class="page1"></li>
+                <li class="page2"></li>
+            </ul>
+        </div>
+        <div class="fullsection full1" pageNum="1">
+            <div id="wrap">
+                <!-- 헤더부분 -->
+                <div id="header">
+                    <pre>Smart Coordinator</pre>
+                </div>
+                <!-- 파일업로드 -->
+                <div id="content">
+                    <label for="input-file" class="label">
+                        <div id="file_con">
+                            <h1 id="label_text">사진을 업로드 해주세요</h1>
+                            <img class="previews" id="face-image" />
+                        </div>
+                    </label>
+                    <input type="file" name="file" id="input-file" style="display: none;" onchange="preview()" />
+                </div>
+                <!-- 풋터부분 -->
+                <div id="footer">
+                    <div class="toggle">
+                        <input type="radio" name="clothes" value="1" id="toggle1" checked="toggle()">
+                        <label for="toggle1">🧑남성</label>
+                        <input type="radio" name="clothes" value="2" id="toggle2">
+                        <label for="toggle2">👩여성</label>
+                    </div>
+                    <button id="sub" disabled="disabled" onclick="predict()">추천받기
+                    </button>
+
+                </div>
+
+            </div>
+            <div id="loading-modal" class="modal">
+                <div class="modal-content">
+                    <div class="spinner"></div>
+                </div>
+            </div>
+        </div>
+        <div class="fullsection full2" pageNum="2">
+            <div class="first">
+                <div class="contents1">
+                    <img id="contents-image" />
+                    <img id="icon">
+                </div>
+                <div class="contents1">
+                    <div id="myDiv">
+                        <canvas id="myChart"></canvas>
+                    </div>
+                    <div id="my-face"></div>
+                    <h3 id="h3"></h3>
+                </div>
+                <div class="contents1">
+                    <div class="tomorrow" data-location-id="065286" data-language="KO" data-unit-system="METRIC"
+                        data-skin="light" data-widget-type="upcoming" style="padding-bottom:22px;position:relative;">
+                        <a href="https://www.tomorrow.io/weather-api/" rel="nofollow noopener noreferrer"
+                            target="_blank"
+                            style="position: absolute; bottom: 0; transform: translateX(-50%); left: 50%;">
+                            <img alt="Powered by the Tomorrow.io Weather API"
+                                src="https://weather-website-client.tomorrow.io/img/powered-by.svg" width="1"
+                                height="1" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <h1 style="text-align: center; border: none;">오늘은 기온차가 크니 겉옷을 챙기시는게 좋을거 같아요 !<br>오늘의 추천코디</h1>
+            <div class="second">
+                <div class="contents2">
+                    <script>
+                        $(document).ready(function () {
+                            var options = {
+                                start: 0,
+                                fadeIn: 400,
+                                loop: true,
+                                buttonPrev: 'Previous',
+                                buttonNext: 'Next',
+                                style: 'carousel',
+                                spacing: -0.6,
+                                nav: false,
+                                buttons: true,
+                            };
+                            $('.img_slide').flipster(options);
+                        });
+                        </script>
+                    <div class="img_slide">
+                        <ul>
+                            <li><img class="imgs" id="img1" alt=""></li>
+                            <li><img class="imgs" id="img2" alt=""></li>
+                            <li><img class="imgs" id="img3" alt=""></li>
+                            <li><img class="imgs" id="img4" alt=""></li>
+                            <li><img class="imgs" id="img5" alt=""></li>
+                            <li><img class="imgs" id="img6" alt=""></li>
+                            <li><img class="imgs" id="img7" alt=""></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="fullsection full3" pageNum="3">
+
+        </div>
+        <div class="fullsection full4" pageNum="4">
+
+        </div>
+        <div class="fullsection full5" pageNum="5">
+
+        </div>
+    </div>
+</body>
+
+</html>

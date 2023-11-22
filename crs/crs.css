@@ -1,0 +1,341 @@
+@font-face{
+  src: url('./font/JalnanOTF.otf') format('opentype');
+  font-family: 'Jalnan';
+}
+*{
+  font-family: 'Jalnan';
+
+}
+html,body {
+  width:100%;
+  height:100%;
+  margin:0px;
+  padding:0px;
+  overflow:hidden;
+
+}
+	
+#fullpage {
+  position:relative;
+  top:0px;
+  z-index:9;
+  width:100%;
+  height:100%;
+}
+.fullsection{
+  width:100%;
+  height:100%;
+  position:relative;
+}
+/* 1페이지 */
+.full1{
+  /* background:red; */
+  width: 100%;
+
+}
+#logo{
+  width: 40%;
+  height: 75%;
+  margin: auto;
+  padding: auto;
+}
+#logo img{
+  width: 100%;
+  height: 100%;
+}
+.input{
+  text-align: center;
+  margin-left: 140px;
+
+}
+
+
+#button{
+  margin-left: 10px;
+  padding: auto;
+  background-color: #999999;
+  border: 1px solid ;
+  border-radius: 10px;
+  color: #fff;
+  height: 41px;
+  cursor: pointer;
+
+}
+
+.input .upload-name{
+  display: inline-block;
+  height: 40px;
+  padding: 0 10px;
+  vertical-align: middle;
+  border: 1px solid #dddddd;
+  width: 20%;
+  color: #999999;
+  border-radius: 5px;
+  
+
+}
+
+.input label{
+  display: inline-block;
+  padding: 10px 20px;
+  color: #fff;
+  vertical-align: middle;
+  background-color: #555555;
+  cursor: pointer;
+  height: 20px;
+  margin-left: 10px;
+  border-radius: 5px;
+}
+
+.input input[type="file"] {
+  position: absolute;
+  width: 0;
+  height: 0;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+}
+
+/* 2페이지 */
+.full2{
+  background-color: rgba(0, 0, 0, 0.9);
+
+  margin:0;
+  padding:0;
+  width: 100%;
+  height:100%;
+  position: fixed;
+  
+}
+
+  div .container{
+      width: 100%;
+      height: 50%;
+      background-color: rgba(0, 0, 0, 0);
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      text-align: center;
+      object-fit: cover;
+  }
+/* span{
+    display: hidden;
+}
+input{
+    display: hidden;
+} */
+div .video1{
+  width: 33%;
+  height: 100%;
+}
+.video{
+
+    width:100%;
+    height:100%;
+    object-fit: contain;
+}
+/* .video2{
+    margin: 0;
+    padding: 0;
+    width:100%;
+    height:100%;
+}
+
+.video3{
+    margin: 0;
+    padding: 0;
+    width:100%;
+    height:100%;
+}
+.video4{
+    margin: 0;
+    padding: 0;
+    width:100%;
+    height:100%;
+}
+.video5{
+    margin: 0;
+    padding: 0;
+    width:100%;
+    height:90%;
+}
+.video6{
+    margin: 0;
+    padding: 0;
+    width:100%;
+    height:100%;
+} */
+
+div .video2{
+  width: 33%;
+  height: 71%;
+}
+div .result1{
+  width: 33%;
+  height: 100%;
+  border-top: 0;
+  border-left: 0;
+
+}
+div .result1 .buttons{
+  display: flex;
+  justify-content: space-around;
+  height: 10%;
+  align-items: center;
+}
+.btn1{
+  display: inline-block;
+  color: #fff;
+  vertical-align: middle;
+  background-color: #555555;
+  cursor: pointer;
+  width: 100px;
+  height: 40px;
+  border-radius: 5px;
+}
+
+.btn2{
+  display: inline-block;
+  color: #fff;
+  vertical-align: middle;
+  background-color: #555555;
+  cursor: pointer;
+  width: 100px;
+  height: 40px;
+  border-radius: 5px;
+}
+
+.btn3{
+  display: inline-block;
+  color: #fff;
+  vertical-align: middle;
+  background-color: #555555;
+  cursor: pointer;
+  width: 100px;
+  height: 40px;
+  border-radius: 5px;
+}
+
+.btn4{
+  display: inline-block;
+  color: #fff;
+  vertical-align: middle;
+  background-color: #555555;
+  cursor: pointer;
+  width: 100px;
+  height: 40px;
+  border-radius: 5px;
+}
+.btn5{
+  display: inline-block;
+  color: #fff;
+  vertical-align: middle;
+  background-color: #555555;
+  cursor: pointer;
+  width: 100px;
+  height: 40px;
+  border-radius: 5px;
+}
+
+.container2{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+div .video3{
+  width: 33%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0);
+}
+div .video4{
+  width: 33%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 5px;
+}
+/* 그래프 */
+
+#myChart{
+  width: 100%;
+}
+
+div .video5{
+  width: 100%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+}
+div .result2{
+  width: 33%;
+  height: 100%;
+  border-top: 0;
+  border-left: 0;
+}
+div .video6{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+  	/* image modal */
+.video6 #result{
+  width: 100%;
+  height:395px;
+  object-fit: contain;
+}
+.modal {
+  display: none;
+  z-index: 500;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.modalBox {
+    position: relative;
+    text-align: center;
+    top: 25%;
+    left : 50%;
+    position : sticky;
+    object-fit: contain;
+}
+
+/* image modal end */
+
+ul, li{
+  margin:0;
+  padding:0;
+  list-style:none;
+  /* visibility:hidden; */
+}
+.quick {
+  width: 100%;
+  margin-left: 50%;
+  padding: auto;
+  /* position:fixed;
+  right:47%;
+  top:90%;
+  transform:translateY(-50%);
+  z-index:100000; */
+}
+.quick li {
+  width: 110px;
+  height: 40px;
+  border-radius:5px;
+  cursor:pointer;
+  }
+.quick .page1{
+  display: hidden;
+}
+.quick .page2{
+  background-color: #555555;
+  text-align: center;
+  line-height: 230%;
+  color: #fff;
+}

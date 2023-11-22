@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/my_fstyle.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.14.0/Sortable.min.js"></script>
+    <script src="script/my_freezon.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+            <div class="logo"><img onclick="location.href='main_freezon.html'" style="cursor:pointer" src="img/logoim.png" alt=""></div>
+            <ul id="contents">
+                <li><a href="#" onclick="location.href='my_freezon.html'">우리집 냉장고</a></li>
+                <li><a href="">옆집 냉장고</a></li>
+                <li><a href="#" onclick="location.href='my_recipe.html'">주간 레시피</a></li>
+                <li><a href="#" onclick="location.href='service.html'">고객센터</a></li>
+            </ul>
+            <div class="log">
+                <a href="#" onclick="location.href='login.html'">로그인/회원가입</a>
+            </div>
+        </header>
+        <section>
+            <div id="name">
+                <span>조은준</span> 님의 냉장고
+            </div>
+            <div>
+                <input type="text" id="find" placeholder="    찾는 재료가 없나요 ? 검색해 보세요 !" >
+            </div>
+            <div id="ch_box">
+                <div id="choice">
+                    <div>선택한 재료</div>
+                    <div id="choice_f"><img id="meat" src="img/meat.png" alt=""></div>
+                    <div id="dd" ondragover="dragEnter(event)" ondrop="drop(event)"></div>
+                </div>
+                <div id="my_re">
+                    <img src="img/my.png" alt="">
+                </div>
+                <div id="choose">
+                    <div>재료를 골라주세요</div>
+                    <div id="food1"><img draggable="true" ondragstart="drag(envent)" id="apple" src="img/apple.png" alt=""></div>
+                    <div id="food2"><img draggable="true" ondragstart="drag(envent)" id="been" src="img/been.png" alt=""></div>
+                    <div id="food3"><img draggable="true" ondragstart="drag(envent)" id="bro" src="img/bro.png" alt=""></div>
+                    <div id="food4"><img draggable="true" ondragstart="drag(envent)" id="carrot" src="img/carrot.png" alt=""></div>
+                    <div id="food5"><img draggable="true" ondragstart="drag(envent)" id="mush" src="img/mush.png" alt=""></div>
+                    <div id="food6"><img draggable="true" ondragstart="drag(envent)" id="piman" src="img/pimang.png" alt=""></div>
+                </div>
+            </div>
+        </section>
+        
+    </div>
+</body>
+</html>
